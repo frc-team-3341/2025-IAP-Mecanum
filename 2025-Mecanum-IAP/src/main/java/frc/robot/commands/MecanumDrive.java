@@ -27,8 +27,7 @@ public class MecanumDrive extends Command {
         double forward = deadband(-controller.getLeftY());
         double strafe  = deadband(controller.getLeftX());
         double rotation = deadband(controller.getRightX()) * 0.5;
-
-        // Telemetry: joystick values
+        //Joystick Values
         SmartDashboard.putNumber("Joystick Forward", forward);
         SmartDashboard.putNumber("Joystick Strafe", strafe);
         SmartDashboard.putNumber("Joystick Rotation", rotation);
@@ -43,8 +42,7 @@ public class MecanumDrive extends Command {
         );
 
         driveTrain.drive(fieldOrientedSpeeds);
-
-        // Telemetry: robot heading
+        //Robot Heading
         SmartDashboard.putNumber("Robot Heading (deg)", driveTrain.getAngle());
     }
 

@@ -7,8 +7,7 @@ import edu.wpi.first.math.kinematics.MecanumDriveWheelSpeeds;
 import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-
-// Studica NavX imports
+//Studica Imports
 import com.studica.frc.AHRS;
 import com.studica.frc.AHRS.NavXComType;
 
@@ -45,8 +44,7 @@ public class DriveTrain extends SubsystemBase {
         frontRightMotor.set(wheelSpeeds.frontRightMetersPerSecond / MAX_WHEEL_SPEED);
         backLeftMotor.set(wheelSpeeds.rearLeftMetersPerSecond / MAX_WHEEL_SPEED);
         backRightMotor.set(wheelSpeeds.rearRightMetersPerSecond / MAX_WHEEL_SPEED);
-
-        // Telemetry: wheel speeds
+        //Displaying wheelspeed on shufflboard
         SmartDashboard.putNumber("FL Wheel Speed", wheelSpeeds.frontLeftMetersPerSecond);
         SmartDashboard.putNumber("FR Wheel Speed", wheelSpeeds.frontRightMetersPerSecond);
         SmartDashboard.putNumber("BL Wheel Speed", wheelSpeeds.rearLeftMetersPerSecond);
@@ -67,7 +65,7 @@ public class DriveTrain extends SubsystemBase {
 
     @Override
     public void periodic() {
-        // Telemetry
+        //Readings
         SmartDashboard.putNumber("NavX Angle", getAngle());
         SmartDashboard.putNumber("Front Left Motor Output", frontLeftMotor.get());
         SmartDashboard.putNumber("Front Right Motor Output", frontRightMotor.get());
