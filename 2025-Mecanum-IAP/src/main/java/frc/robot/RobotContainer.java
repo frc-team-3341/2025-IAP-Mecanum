@@ -22,4 +22,12 @@ public class RobotContainer {
             new MecanumDrive(driveTrain, controller)
         );
   }
+
+  public DriveTrain getDriveTrain() {
+    return driveTrain;
+  }
+
+  public XboxController getController() {
+    return controller;
+  }
 }
