@@ -28,8 +28,8 @@ public class DriveTrain extends SubsystemBase {
 
     private final AHRS navx = new AHRS(NavXComType.kMXP_SPI);
     //Temporary Values for the dimensions
-    public static final double ROBOT_WIDTH  = 0.32;
-    public static final double ROBOT_LENGTH = 0.43;
+    public static final double ROBOT_WIDTH  = 0.32; //Orignally, this was 12.6 inches in terms of width
+    public static final double ROBOT_LENGTH = 0.43;//This currently 0.43 meters but may be inaccurate due to wheel positioning being possibly different
     public static final double MAX_WHEEL_SPEED = 4.0;
     public static final double MAX_ANGULAR_SPEED_RAD_PER_SEC = Math.PI; 
     //Left is + and forward is also +
