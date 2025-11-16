@@ -24,7 +24,12 @@ public class Robot extends TimedRobot {
   public void robotInit() {
       robotContainer = new RobotContainer();
   }
-
+  @Override
+  public void teleopInit() {
+      if (robotContainer != null && robotContainer.getDriveTrain() != null) {
+          robotContainer.getDriveTrain().resetNavx();
+      }
+  }
   /**
    * This function is called every 20 ms, no matter the mode. Use this for items like diagnostics
    * that you want ran during disabled, autonomous, teleoperated and test.
@@ -35,5 +40,9 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     CommandScheduler.getInstance().run();
+  }
+  @Override
+  public void robotPeriodic() {
+      CommandScheduler.getInstance().run();
   }
 }
