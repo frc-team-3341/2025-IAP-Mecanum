@@ -1,0 +1,9 @@
+{
+    "geometry": [
+      {
+        "type": "box",
+        "dimensions": [1.0, 0.8, 0.2],
+        "color": "#3A9BDC"
+      }
+    ]
+  } 
