@@ -33,7 +33,7 @@ public class MecanumDrive extends Command {
     public void execute() {
         double forward = applyDeadbandAndSquare(-controller.getLeftY()) * MAX_TRANSLATION_SPEED;
         double strafe  = applyDeadbandAndSquare(-controller.getLeftX()) * MAX_TRANSLATION_SPEED;
-        double rotation = applyDeadbandAndSquare(controller.getRightX()) * ROTATION_SCALE * MAX_TRANSLATION_SPEED;
+        double rotation = applyDeadbandAndSquare(-controller.getRightX()) * ROTATION_SCALE * MAX_TRANSLATION_SPEED;
 
         double forwardMps = forward * DriveTrain.MAX_WHEEL_SPEED;
         double strafeMps  = strafe  * DriveTrain.MAX_WHEEL_SPEED;

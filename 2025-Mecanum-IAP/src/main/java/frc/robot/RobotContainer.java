@@ -5,6 +5,8 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.commands.AutoDrive;
 import frc.robot.commands.MecanumDrive;
 import frc.robot.subsystems.DriveTrain;
 
@@ -30,4 +32,7 @@ public class RobotContainer {
   public XboxController getController() {
     return controller;
   }
+  public Command getAutonomousCommand() {
+        return new AutoDrive();
+    }
 }

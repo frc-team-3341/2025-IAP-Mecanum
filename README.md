@@ -13,3 +13,5 @@ This is necessary to keep make sure that the angle of the NavX gets resetted in 
 Dec. 1 Addition of Simulation Files and Changes to execute method in MecanumDrive.java:
 Since our robot wasn't finished, we decided to add try out robot simulation on AdvantageScope to see if the code was working correctly. A few files, including the simulation files for robot simulation and the robot.json file to replicate the robot on AdvantageScope, were added as well. After testing the robot, we realized that the direction the wheels were spinning on the simulated chassis was the opposite of what it should have been when laterally moving the robot. So, we updated MecanumDrive.java to make the wheels do the opposite of what they were doing when laterally moving the robot. 
 
+Dec. 11. Adding Pathplanner Control to the Robot
+In this commit, I added multiple different methods in DriveTrain.java and created a new file caleld AutoDrive.java to be able to smoothly drive the chassis using the pathplanner paths. 
