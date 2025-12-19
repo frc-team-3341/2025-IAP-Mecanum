@@ -34,10 +34,10 @@ import com.studica.frc.AHRS.NavXComType;
 
 public class DriveTrain extends SubsystemBase {
 
-    private final SparkMax frontLeftMotor = new SparkMax(1,SparkMax.MotorType.kBrushless);
-    private final SparkMax backLeftMotor = new SparkMax(2,SparkMax.MotorType.kBrushless);
-    private final SparkMax frontRightMotor = new SparkMax(3,SparkMax.MotorType.kBrushless);
-    private final SparkMax backRightMotor = new SparkMax(4,SparkMax.MotorType.kBrushless);
+    private final SparkMax frontLeftMotor = new SparkMax(5,SparkMax.MotorType.kBrushless);
+    private final SparkMax backLeftMotor = new SparkMax(7,SparkMax.MotorType.kBrushless);
+    private final SparkMax frontRightMotor = new SparkMax(4,SparkMax.MotorType.kBrushless);
+    private final SparkMax backRightMotor = new SparkMax(6,SparkMax.MotorType.kBrushless);
     private final Field2d field = new Field2d();
 
     private final double[] simWheelPosMeters = {0, 0, 0, 0}; //fl, fr, bl,br

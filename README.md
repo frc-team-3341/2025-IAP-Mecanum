@@ -15,3 +15,6 @@ Since our robot wasn't finished, we decided to add try out robot simulation on A
 
 Dec. 11. Adding Pathplanner Control to the Robot
 In this commit, I added multiple different methods in DriveTrain.java and created a new file caleld AutoDrive.java to be able to smoothly drive the chassis using the pathplanner paths. 
+
+Dec. 13. Creation of Methods that involve getting the robot to show up on AdvantageScope
+Even despite adding the simulation files and changes on Dec 1, the robot still was not displaying. So this commit helped get all of the necessary data and angles from the controller and transferred this into the movement a simulated chassis on AdvantageScope. One of the main methods added was SimulationPeriodic inside of DriveTrain.java, which is resonsible for transferring the speeds and directions of each wheel into the simulated chassis and getting wheel position off of that. 
