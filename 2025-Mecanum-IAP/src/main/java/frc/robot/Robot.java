@@ -32,19 +32,12 @@ public class Robot extends TimedRobot {
         autonomousCommand.cancel();
         autonomousCommand = null;
     }
-      if (robotContainer != null && robotContainer.getDriveTrain() != null) {
-          robotContainer.getDriveTrain().resetNavx();
-      }
   }
     @Override
     public void autonomousInit() {
     autonomousCommand = robotContainer.getAutonomousCommand();
     if (autonomousCommand != null) {
         autonomousCommand.schedule();
-    }
-
-    if (robotContainer != null && robotContainer.getDriveTrain() != null) {
-        robotContainer.getDriveTrain().resetNavx();
     }
     }
 
